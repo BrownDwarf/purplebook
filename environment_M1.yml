@@ -1,0 +1,25 @@
+name: purple_env
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.8
+  - numpy
+  - scipy
+  - matplotlib
+  - astropy>=4.1
+  - astroquery
+  - specutils 
+  - tqdm
+  - pandas
+  - bokeh
+  - jupyter
+  - ipython
+  - seaborn
+  - scikit-learn
+  - h5py 
+  - pytest
+  - black
+  - pip
+  - pip:
+      - celerite2

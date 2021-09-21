@@ -1,0 +1,23 @@
+name: purple
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7
+  - numpy
+  - scipy
+  - matplotlib
+  - astropy>=4.1
+  - astroquery
+  - specutils
+  - tqdm
+  - pandas
+  - bokeh
+  - jupyter
+  - ipython
+  - seaborn
+  - h5py 
+  - black
+  - pip
+  - pip:
+      - celerite2
