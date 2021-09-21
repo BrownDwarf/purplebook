@@ -1,5 +1,5 @@
 import math
-from ClimateUtilities import *  # To get the math methods routines
+from purplebook.ClimateUtilities import *  # To get the math methods routines
 import numpy as np
 
 #
