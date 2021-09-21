@@ -1,5 +1,6 @@
 import math
 from ClimateUtilities import *  # To get the math methods routines
+import numpy as np
 
 #
 # All units are mks units
@@ -638,11 +639,11 @@ class MoistAdiabat:
             pL.append(p)
             molarConL.append(self.satvp(T) / p)
             TL.append(T)
-        # Numeric.array turns lists into arrays that one
+        # np.array turns lists into arrays that one
         # can do arithmetic on.
-        pL = Numeric.array(pL)
-        TL = Numeric.array(TL)
-        molarConL = Numeric.array(molarConL)
+        pL = np.array(pL)
+        TL = np.array(TL)
+        molarConL = np.array(molarConL)
         # Now compute mass specific concentration
         Mc = self.condensible.MolecularWeight
         Mnc = self.noncon.MolecularWeight
@@ -661,8 +662,8 @@ class MoistAdiabat:
             T1 = interp(pL, TL)
             mc1 = interp(pL, molarConL)
             q1 = interp(pL, qL)
-            T = Numeric.array([T1(pp) for pp in pgrid])
-            mc = Numeric.array([mc1(pp) for pp in pgrid])
-            q = Numeric.array([q1(pp) for pp in pgrid])
-            return Numeric.array(pgrid), T, mc, q
+            T = np.array([T1(pp) for pp in pgrid])
+            mc = np.array([mc1(pp) for pp in pgrid])
+            q = np.array([q1(pp) for pp in pgrid])
+            return np.array(pgrid), T, mc, q
 
